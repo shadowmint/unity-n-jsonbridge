@@ -1,11 +1,11 @@
 {
-  "name": "unity-TEMPLATE",
+  "name": "unity-n-jsonbridge",
   "version": "0.0.1",
-  "description": "TEMPLATE",
+  "description": "JSON over TCP client library",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shadowmint/unity-TEMPLATE.git"
+    "url": "git+https://github.com/shadowmint/unity-n-jsonbridge.git"
   },
   "files": [
     "index.js",
@@ -15,14 +15,16 @@
   "author": "douglas.linder@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shadowmint/unity-TEMPLATE/issues"
+    "url": "https://github.com/shadowmint/unity-n-jsonbridge/issues"
   },
-  "homepage": "https://github.com/shadowmint/unity-TEMPLATE",
+  "homepage": "https://github.com/shadowmint/unity-n-jsonbridge",
   "scripts": {
     "postinstall": "node scripts/postinstall.js"
   },
   "dependencies": {
+    "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "mkdirp": "^0.5.1"
+    "unity-n-core": "github:shadowmint/unity-n-core",
+    "unity-n-events": "github:shadowmint/unity-n-events"
   }
 }
