@@ -9,12 +9,17 @@ namespace N.Package.JsonBridge.Internal
     public class MockTransport : ITransport
     {
         public EventHandler EventHandler { get; set; }
+        public bool Idle { get; set; }
 
         public void Connect(string host, int port)
         {
         }
 
         public void Write<T>(T target)
+        {
+        }
+
+        public void Close()
         {
         }
 

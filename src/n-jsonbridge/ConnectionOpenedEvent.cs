@@ -1,6 +1,9 @@
 using N.Package.Events;
 
-public class ConnectionOpenedEvent : IEvent
+namespace N.Package.JsonBridge
 {
-    public IEventApi Api { get; set; }
+    public class ConnectionOpenedEvent : IEvent
+    {
+        public IEventApi Api { get; set; }
+    }
 }

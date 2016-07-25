@@ -31,6 +31,14 @@ namespace N.Package.JsonBridge
         }
 
         /// <summary>
+        /// Check if the transport is busy or not.
+        /// </summary>
+        public bool Idle
+        {
+            get { return _transport.Idle; }
+        }
+
+        /// <summary>
         /// Make an out going connection to this given host on the given port.
         /// There is no return value on this call because all returns are done via callback.
         /// </summary>
@@ -48,6 +56,7 @@ namespace N.Package.JsonBridge
             {
                 _eventHandler.Trigger(queuedEvent);
             }
+            _eventCache.Clear();
         }
 
         /// <summary>
@@ -64,6 +73,14 @@ namespace N.Package.JsonBridge
         public void Write<T>(T target)
         {
             _transport.Write(target);
+        }
+
+        /// <summary>
+        /// Close the connection if it's active.
+        /// </summary>
+        public void Close()
+        {
+            _transport.Close();
         }
     }
 }
