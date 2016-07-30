@@ -1,17 +1,30 @@
-# TEMPLATE
+# Json Bridge
 
-...
+This is a package for working with a local JSON-over-TCP server.
 
 ## Usage
 
-See the tests in the `Editor/` folder for each class for usage examples.
+Look at the 'tests' folder for an example scene.
+
+Typically you would extend `NetworkManagerBase` and then add an instance of it 
+to the scene.
+
+Notice that connections are managed in a separate thread, so this will only
+work on platforms that support threads. 
+
+Additionally the hot-reload will cause threads to hang, so disable hot-reload
+when working with this library.
+
+And example server can be found at: 
+
+https://github.com/shadowmint/go-transport/tree/master/tests
 
 ## Install
 
 From your unity project folder:
 
     npm init
-    npm install TEMPLATE --save
+    npm install shadowmint/unity-n-jsonbridge --save
     echo Assets/packages >> .gitignore
     echo Assets/packages.meta >> .gitignore
 
@@ -39,4 +52,4 @@ All tests are wrapped in `#if ...` blocks to prevent test spam.
 
 You can enable tests in: Player settings > Other Settings > Scripting Define Symbols
 
-The test key for this package is: TEMPLATE_TESTS
+The test key for this package is: N_JSONBRIDGE_TESTS
