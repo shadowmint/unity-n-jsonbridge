@@ -1,6 +1,6 @@
 {
   "name": "unity-n-jsonbridge",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "JSON over TCP client library",
   "main": "index.js",
   "repository": {
