@@ -114,14 +114,7 @@ namespace N.Package.JsonBridge.Internal
 
       _stream = _client.GetStream();
       _writer = new StreamWriter(_stream);
-      try
-      {
-        ReadStreamData();
-      }
-      catch (Exception err)
-      {
-        _.Log(err);
-      }
+      ReadStreamData();
     }
 
     /// Block on the stream forever, reading data as soon as we can.
